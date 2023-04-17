@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="png.png">
+	<!-- Created with Adobe Animate version 21.0.3.38773 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Bitmap 1" x="10" y="10" width="120" height="231"/>
+	<SubTexture name="Bitmap 2" x="140" y="10" width="562" height="315"/>
+	<SubTexture name="Logo old" x="712" y="10" width="1031" height="545"/>
+</TextureAtlas>
