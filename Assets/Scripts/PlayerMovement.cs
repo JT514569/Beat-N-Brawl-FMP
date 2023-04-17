@@ -7,10 +7,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float jump;
     private Rigidbody2D body;
+    private Animator anim;
 
     private void Awake()
     {
+        //Grab refs for rigidbody and animator
         body = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -18,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         body.velocity = new Vector2(horizontalInput * speed,body.velocity.y);
 
+        //Player left and right flipping
         if (horizontalInput > 0.01f)
             transform.localScale = Vector2.one;
 
@@ -28,6 +32,9 @@ public class PlayerMovement : MonoBehaviour
         {
             body.velocity = new Vector2(body.velocity.x, jump);
         }
+
+        //Set animator stuff
+        anim.SetBool("Run", horizontalInput != 0);
 
     }
 
