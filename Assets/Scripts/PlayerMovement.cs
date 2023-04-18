@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space) && Grounded)
         {
-            body.velocity = new Vector2(body.velocity.x, jump);
+            Jump();
         }
 
         //Set animator stuff
@@ -41,12 +41,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        body.velocity = new Vector2(body.velocity.x, speed);
+        body.velocity = new Vector2(body.velocity.x, jump);
         anim.SetTrigger("Jump");
         Grounded = false;
     }
 
-    private void OnCollisionEnter(Collision2D collision)
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Ground")
         {
