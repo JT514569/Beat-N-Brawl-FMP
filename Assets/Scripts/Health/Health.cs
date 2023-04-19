@@ -5,7 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] private float StartHP;
-    private float currentHP;
+    public float currentHP { get; private set; }
 
     private void Awake()
     {
@@ -14,6 +14,7 @@ public class Health : MonoBehaviour
     public void Damage(float _damage)
     {
         currentHP = Mathf.Clamp(currentHP - _damage, 0, StartHP);
+
         if (currentHP > 0)
         {
 
@@ -22,5 +23,11 @@ public class Health : MonoBehaviour
         {
 
         }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+            Damage(1);
     }
 }
