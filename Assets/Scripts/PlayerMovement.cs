@@ -73,7 +73,8 @@ public class PlayerMovement : MonoBehaviour
         }
         else if(onWall() && !isGrounded()) 
         {
-
+            wallJumpCooldown = 0;
+            body.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 3, 6);
         }
     }
 
