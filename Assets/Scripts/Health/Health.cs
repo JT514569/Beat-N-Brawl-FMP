@@ -40,4 +40,9 @@ public class Health : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
                 Damage(1.25f);
         }
+
+    public void AddHP(float _value)
+    {
+        currentHP = Mathf.Clamp(currentHP + _value, 0, StartHP);
+    }
 }
