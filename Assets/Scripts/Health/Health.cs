@@ -38,6 +38,6 @@ public class Health : MonoBehaviour
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.E))
-                Damage(1f);
+                Damage(1.25f);
         }
 }

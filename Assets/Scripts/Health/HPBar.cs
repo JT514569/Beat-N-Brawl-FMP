@@ -12,11 +12,11 @@ public class HPBar : MonoBehaviour
 
     private void Start()
     {
-        totalHPBar.fillAmount = PlayerHP.currentHP / 10;
+        totalHPBar.fillAmount = PlayerHP.currentHP / 5;
     }
 
     private void Update()
     {
-        currentHPBar.fillAmount = PlayerHP.currentHP / 10;
+        currentHPBar.fillAmount = PlayerHP.currentHP / 5;
     }
 }
