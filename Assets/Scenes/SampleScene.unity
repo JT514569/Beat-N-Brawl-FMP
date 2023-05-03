@@ -1730,9 +1730,21 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6744044319387898891, guid: 05bf2578de4af4a409cbc775ae86c443, type: 3}
+      propertyPath: damage
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6744044319387898891, guid: 05bf2578de4af4a409cbc775ae86c443, type: 3}
+      propertyPath: attackCooldown
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6744044319387898897, guid: 05bf2578de4af4a409cbc775ae86c443, type: 3}
       propertyPath: m_Name
       value: Longleg
+      objectReference: {fileID: 0}
+    - target: {fileID: 6744044319387898897, guid: 05bf2578de4af4a409cbc775ae86c443, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6744044319387898900, guid: 05bf2578de4af4a409cbc775ae86c443, type: 3}
       propertyPath: m_RootOrder
