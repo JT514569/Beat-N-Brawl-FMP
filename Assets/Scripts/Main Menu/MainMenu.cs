@@ -23,6 +23,10 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
+    public void OutroSkip()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
+    }
     public void Intro()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
