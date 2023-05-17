@@ -27,7 +27,16 @@ public class PlayerAttack : MonoBehaviour
 
     private void Attack()
     {
+        
         anim.SetTrigger("Attack");
         cooldownTimer = 0;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy")
+        {
+            collision.GetComponent<Health>().Damage(1);
+        }
     }
 }
