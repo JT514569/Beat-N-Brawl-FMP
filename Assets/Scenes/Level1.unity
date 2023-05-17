@@ -2287,6 +2287,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Level2
+  transition: {fileID: 0}
+  transitionTime: 1
 --- !u!61 &1610743607
 BoxCollider2D:
   m_ObjectHideFlags: 0

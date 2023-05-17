@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 public class LevelChange : MonoBehaviour
 {
     [SerializeField] private string sceneName;
+    public Animator transition;
+
+    public float transitionTime = 1f;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -12,5 +15,14 @@ public class LevelChange : MonoBehaviour
         {
             SceneManager.LoadScene(sceneName);
         }
+    }
+
+    IEnumerator LoadLevel(int levelIndex)
+    {
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(transitionTime);
+
+        SceneManager.LoadScene(levelIndex);
     }
 }
