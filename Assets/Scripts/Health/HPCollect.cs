@@ -7,12 +7,15 @@ public class HPCollect : MonoBehaviour
 
     [SerializeField] private float hpValue;
 
+    [SerializeField] private AudioSource Collectsound;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        if(collision.gameObject.CompareTag("Player"))
         {
             collision.GetComponent<Health>().AddHP(hpValue);
-            gameObject.SetActive(false);
+            Collectsound.Play();
+            Destroy(collision.gameObject);
         }
     }
     // Start is called before the first frame update

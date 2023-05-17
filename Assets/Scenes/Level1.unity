@@ -941,6 +941,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HPCollect (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9119905457262900482, guid: 1d3bf9fd87a73544b82743e96f1b341c, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d3bf9fd87a73544b82743e96f1b341c, type: 3}
@@ -2460,7 +2464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23d0369c96e5568458fc863115ff9d57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &1995031559
+--- !u!82 &1995031561
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2470,8 +2474,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: fcd1d0745b412f64ea20e0b639a260ac, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2964,6 +2968,10 @@ PrefabInstance:
     - target: {fileID: 864645993082201074, guid: 1d3bf9fd87a73544b82743e96f1b341c, type: 3}
       propertyPath: m_Name
       value: HPCollect
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119905457262900482, guid: 1d3bf9fd87a73544b82743e96f1b341c, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
