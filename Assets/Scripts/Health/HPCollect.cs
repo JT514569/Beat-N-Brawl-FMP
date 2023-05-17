@@ -15,7 +15,8 @@ public class HPCollect : MonoBehaviour
         {
             collision.GetComponent<Health>().AddHP(hpValue);
             Collectsound.Play();
-            Destroy(collision.gameObject);
+            Destroy(gameObject);
+
         }
     }
     // Start is called before the first frame update
