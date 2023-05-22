@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Health : MonoBehaviour
     [SerializeField] private float Invulnerability;
     [SerializeField] private float InvinFlashes;
     [SerializeField] private float InvinSeconds;
+    [SerializeField] private string sceneName;
     private SpriteRenderer spriteRend;
     private void Awake()
     {
@@ -42,6 +44,7 @@ public class Health : MonoBehaviour
                 if(GetComponent<PlayerMovement>() != null)
                 {
                     GetComponent<PlayerMovement>().enabled = false;
+                    Invoke("PlayerRespawn", 1);
                 }
 
 
@@ -80,5 +83,10 @@ public class Health : MonoBehaviour
         }
         //Invulnerableness
         Physics2D.IgnoreLayerCollision(10, 11, false);
+    }
+
+    public void PlayerRespawn()
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }
