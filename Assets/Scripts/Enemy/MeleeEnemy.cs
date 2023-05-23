@@ -34,7 +34,7 @@ public class MeleeEnemy : MonoBehaviour
             {
                 cooldownTimer = 0;
                 anim.SetTrigger("punch");
-                attackSound.Play();
+                Invoke("AttackSound", 0.86f);
             }
         }
 
@@ -63,5 +63,10 @@ public class MeleeEnemy : MonoBehaviour
         {
             playerHealth.Damage(damage);
         }
+    }
+
+    private void AttackSound()
+    {
+        attackSound.Play();
     }
 }
