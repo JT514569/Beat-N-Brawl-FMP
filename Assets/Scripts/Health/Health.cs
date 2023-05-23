@@ -17,6 +17,8 @@ public class Health : MonoBehaviour
     [SerializeField] private float InvinSeconds;
     [SerializeField] private string sceneName;
     private SpriteRenderer spriteRend;
+    [SerializeField] private AudioSource HurtSound;
+    [SerializeField] private AudioSource DeathSound;
     private void Awake()
     {
         currentHP = StartHP;
@@ -31,6 +33,7 @@ public class Health : MonoBehaviour
         {
             anim.SetTrigger("Hurt");
             StartCoroutine(Invulnerable());
+            HurtSound.Play();
 
         }
         else
@@ -38,10 +41,10 @@ public class Health : MonoBehaviour
             if (!dead)
             {
                 anim.SetTrigger("Die");
-
+                DeathSound.Play();
 
                 //Player
-                if(GetComponent<PlayerMovement>() != null)
+                if (GetComponent<PlayerMovement>() != null)
                 {
                     GetComponent<PlayerMovement>().enabled = false;
                     Invoke("PlayerRespawn", 1);
@@ -59,12 +62,6 @@ public class Health : MonoBehaviour
 
         }
     }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-                Damage(1.25f);
-        }
 
     public void AddHP(float _value)
     {
