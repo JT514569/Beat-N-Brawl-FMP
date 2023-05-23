@@ -13,7 +13,7 @@ public class MeleeEnemy : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
     private float cooldownTimer = Mathf.Infinity;
 
-    [SerializeField] private AudioClip attackSound;
+    [SerializeField] private AudioSource attackSound;
 
     private Animator anim;
 
@@ -34,7 +34,7 @@ public class MeleeEnemy : MonoBehaviour
             {
                 cooldownTimer = 0;
                 anim.SetTrigger("punch");
-                SoundManager.instance.PlaySound(attackSound);
+                attackSound.Play();
             }
         }
 
